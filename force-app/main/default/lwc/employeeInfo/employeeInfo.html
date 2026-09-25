@@ -1,0 +1,23 @@
+<template>
+    <template lwc:if = {showEmployeeForm}>
+        <lightning-card title = 'Employee Informatiohn'>
+            <div class = 'slds-m-around_medium'>
+                <lightning-input label = 'Nombre' value = {namme} onchange = {handleNameChange}></lightning-input>
+                <lightning-input type = number label = 'Edad' value = {age} onchange = {handleAgeChange}></lightning-input>
+                <lightning-input type = number label = 'Salario' value = {salary} onchangue = {handleSalaryChange}></lightning-input>
+
+                <lightning-button label = 'Guardar' variant = 'brand' onclick = {handleSave}></lightning-button>
+            </div>
+        </lightning-card>
+    </template>
+
+    <template lwc:else>
+        <lightning-card title="'Employee Details">
+            <div class = "lsds-m-around_medium">
+                <p>Nombre: {name}</p>
+                <p>Edad: {age}</p>
+                <p>Salario: {salary}</p>
+            </div>
+        </lightning-card>
+    </template>
+</template>

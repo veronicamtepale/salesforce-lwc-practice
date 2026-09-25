@@ -1,0 +1,15 @@
+<template>
+
+    <lightning-input
+        type = "checkbox"
+        label = 'Mostrar saludo'
+        checked = {showGreeting}
+        onchange={handleNameChange}>
+    </lightning-input>
+
+    <template lwc:if={showGreeting}>
+        <h1>Hola Veronica!!</h1>
+        <p>Este mensaje se esta renderizando condicionalmente</p>
+    </template>
+
+</template>
