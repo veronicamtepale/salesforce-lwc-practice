@@ -1,10 +1,10 @@
-# ⚡ Salesforce LWC Practice
+# Salesforce LWC Practice
 
 This repository contains my hands-on Salesforce development exercises while learning **Lightning Web Components (LWC)** and preparing for the **Salesforce Platform Developer I** certification.
 
 The purpose of this repository is to document my progress and practice Salesforce development concepts through small, practical components.
 
-## 🚀 Technologies
+## Technologies
 
 - Salesforce Platform
 - Lightning Web Components (LWC)
@@ -15,7 +15,7 @@ The purpose of this repository is to document my progress and practice Salesforc
 - Visual Studio Code
 - Git & GitHub
 
-## 📚 Topics Practiced
+## Topics Practiced
 
 ### LWC Fundamentals
 - Component structure
@@ -39,6 +39,12 @@ The purpose of this repository is to document my progress and practice Salesforc
 - Public methods with `@api`
 - Calling Child methods from a Parent component
 - `this.template.querySelector()`
+- Child → Parent communication with Custom Events
+- Creating events with `CustomEvent`
+- Sending data with `detail`
+- Dispatching events with `dispatchEvent()`
+- Handling Custom Events in the Parent component
+- Reading event data with `event.detail`
 
 ### LWC Lifecycle Hooks
 
@@ -49,7 +55,7 @@ The purpose of this repository is to document my progress and practice Salesforc
 - `disconnectedCallback()`
 - Parent and Child component lifecycle
 
-## 🧪 Practice Components
+## Practice Components
 
 | Component | Concepts Practiced |
 |---|---|
@@ -63,11 +69,12 @@ The purpose of this repository is to document my progress and practice Salesforc
 | `productList` / `productDetail` | Arrays, objects, `for:each` and Parent → Child communication |
 | `textParent` / `textChild` | Public methods, `@api` and `querySelector()` |
 | Lifecycle Hooks exercise | LWC component lifecycle |
+| `eventParent` / `eventChild` | Child → Parent communication using `CustomEvent`, `detail` and `dispatchEvent()` |
 
-## 🎯 Goal
+## Goal
 
 My goal is to strengthen my Salesforce development skills through hands-on practice and build a solid foundation in LWC, Apex, SOQL, DML, Triggers, testing, and other concepts required for Salesforce development and the Platform Developer I certification.
 
-## 📈 Progress
+## Progress
 
 This repository will continue to evolve as I learn and practice new Salesforce development concepts.
