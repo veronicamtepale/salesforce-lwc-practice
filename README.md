@@ -45,6 +45,8 @@ The purpose of this repository is to document my progress and practice Salesforc
 - Dispatching events with `dispatchEvent()`
 - Handling Custom Events in the Parent component
 - Reading event data with `event.detail`
+- Event bubbling with `bubbles: true`
+- Listening to Child events from Parent templates
 
 ### LWC Lifecycle Hooks
 
@@ -70,6 +72,7 @@ The purpose of this repository is to document my progress and practice Salesforc
 | `textParent` / `textChild` | Public methods, `@api` and `querySelector()` |
 | Lifecycle Hooks exercise | LWC component lifecycle |
 | `eventParent` / `eventChild` | Child → Parent communication using `CustomEvent`, `detail` and `dispatchEvent()` |
+| `bubbleParent` / `bubbleChild` | Child → Parent communication using `CustomEvent`, `detail`, `bubbles: true` and event handling |
 
 ## Goal
 
