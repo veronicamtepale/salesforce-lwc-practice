@@ -93,6 +93,13 @@ The purpose of this repository is to document my progress and strengthen my Sale
 - Checking collection size
 - Using `.isEmpty()`
 - Working with `Set<Id>`
+- Converting `List<Account>` into `Map<Id, Account>`
+- Using `Set<Id>` to store unique record IDs
+- Connecting `List`, `Set`, `Map`, `Account`, and `Id`
+- Using `.put()` and `.get()` with Maps
+- Filtering records before adding them to collections
+- Understanding method input and return types
+- Tracking data flow between collections
 
 ### SOQL
 
@@ -147,6 +154,8 @@ The purpose of this repository is to document my progress and strengthen my Sale
 | `upsertAccount()` | Insert and update using `upsert` |
 | `undeleteAccount()` | Deleted records, `ALL ROWS` and `undelete` |
 | `massiveUpdate()` | Lists, loops, filtering, bulkification and bulk DML |
+| `AccountMapExercise` | `List<Account>`, `Map<Id, Account>`, `.put()`, `.get()` and retrieving records by Id |
+| `AccountCollectionExercise` | `List<Account>`, `Set<Id>`, `Map<Id, Account>`, filtering by Industry and collection transformations |
 
 ---
 
