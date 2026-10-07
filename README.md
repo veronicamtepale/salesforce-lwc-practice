@@ -1,8 +1,8 @@
 # Salesforce Development Practice
 
-This repository contains my hands-on Salesforce development exercises while learning **Lightning Web Components (LWC), Apex, SOQL, DML, and Salesforce development best practices**, while preparing for the **Salesforce Platform Developer I** certification.
+This repository contains my hands-on Salesforce development exercises while learning and practicing **Lightning Web Components (LWC), Apex, SOQL, DML, Triggers, and Salesforce development concepts**.
 
-The purpose of this repository is to document my progress and strengthen my Salesforce development skills through practical exercises, progressively moving from basic concepts to more realistic Salesforce development scenarios.
+I am currently preparing for the **Salesforce Platform Developer I** certification and using this repository to document my progress as I continue building my skills as a Salesforce Developer.
 
 ---
 
@@ -22,99 +22,80 @@ The purpose of this repository is to document my progress and strengthen my Sale
 
 ---
 
-# Topics Practiced
+## Topics Practiced
 
-## Lightning Web Components
-
-### LWC Fundamentals
+### Lightning Web Components
 
 - Component structure
 - HTML templates
 - JavaScript properties
 - Data binding
 - Event handling
-- `event.target.value`
-- Conditional rendering with `lwc:if`, `lwc:elseif`, and `lwc:else`
+- Conditional rendering
 - List rendering with `for:each`
 - Iterators
-- Component-scoped CSS
 - Lightning Base Components
-
-### Component Communication
-
-- Public properties with `@api`
+- Public properties and methods with `@api`
 - Parent → Child communication
-- Passing values from Parent → Child
-- Passing objects from Parent → Child
-- Public methods with `@api`
-- Calling Child methods from a Parent component
-- `this.template.querySelector()`
 - Child → Parent communication with Custom Events
-- Creating events with `CustomEvent`
-- Sending data with `detail`
-- Dispatching events with `dispatchEvent()`
-- Handling Custom Events in the Parent component
-- Reading event data with `event.detail`
-- Event bubbling with `bubbles: true`
-- Listening to Child events from Parent templates
-
-### LWC Lifecycle Hooks
-
-- `constructor()`
-- `super()`
-- `connectedCallback()`
-- `renderedCallback()`
-- `disconnectedCallback()`
-- Parent and Child component lifecycle
+- `event.detail`
+- Event bubbling
+- `this.template.querySelector()`
+- Lifecycle Hooks:
+  - `constructor()`
+  - `connectedCallback()`
+  - `renderedCallback()`
+  - `disconnectedCallback()`
 
 ---
 
-## Apex
-
-### Apex Fundamentals
+### Apex
 
 - Variables and data types
-- Conditional statements
 - `if / else`
+- Logical operators
 - Loops
 - Methods
 - Parameters
 - Return types
-- `static` methods
-- `void` methods
+- `static`
+- `void`
+- Null handling
+
+---
 
 ### Collections
 
 - `List`
 - `Set`
 - `Map`
+- `Set<Id>`
+- `Map<Id, Account>`
+- `.add()`
+- `.put()`
+- `.get()`
+- `.containsKey()`
+- `.isEmpty()`
 - Iterating through collections
-- Adding elements with `.add()`
-- Checking collection size
-- Using `.isEmpty()`
-- Working with `Set<Id>`
-- Converting `List<Account>` into `Map<Id, Account>`
-- Using `Set<Id>` to store unique record IDs
-- Connecting `List`, `Set`, `Map`, `Account`, and `Id`
-- Using `.put()` and `.get()` with Maps
-- Filtering records before adding them to collections
-- Understanding method input and return types
-- Tracking data flow between collections
+- Filtering records
+- Working with record IDs
+
+---
 
 ### SOQL
 
 - `SELECT`
 - `WHERE`
+- `IN`
 - `LIMIT`
 - `ORDER BY`
 - Bind variables with `:`
-- `IN`
 - `COUNT()`
 - `GROUP BY`
-- Aggregate queries
 - `AggregateResult`
-- Casting query results
 - `ALL ROWS`
+
+---
 
 ### DML
 
@@ -123,100 +104,91 @@ The purpose of this repository is to document my progress and strengthen my Sale
 - `delete`
 - `upsert`
 - `undelete`
-
-### Bulkification
-
-- Processing multiple records with `List<Account>`
+- Working with multiple records
 - Avoiding DML inside loops
-- Collecting modified records before DML
-- Performing a single DML operation on multiple records
-- Filtering records before update
-- Using `Set<Id>` for bulk SOQL queries
-- Using `WHERE Id IN :idSet`
 
 ---
 
-# Apex Practice Exercises
+### Apex Triggers
 
-| Exercise | Concepts Practiced |
-|---|---|
-| `EmployeeCalculator` | Methods, parameters, conditionals and calculations |
-| `SalaryAnalyzer` | `List<Decimal>`, loops and counters |
-| `EmailAnalyzer` | `Set<String>` and duplicate removal |
-| `EmployeeSalaryMap` | `Map<String, Decimal>`, `containsKey()` and `get()` |
-| `AccountAnalyzer.getLargeAccounts()` | SOQL, `ORDER BY` and `LIMIT` |
-| `AccountAnalyzer.countAccounts()` | `COUNT()` |
-| `AccountAnalyzer.countAccountsByIndustry()` | `GROUP BY`, `COUNT()` and `AggregateResult` |
-| `AccountAnalyzer.getAccountsByIndustry()` | SOQL filters and bind variables |
-| `createSampleAccounts()` | Bulk `insert` |
-| `updateAccountIndustry()` | SOQL + DML `update` |
-| `deleteAccount()` | DML `delete` |
-| `upsertAccount()` | Insert and update using `upsert` |
-| `undeleteAccount()` | Deleted records, `ALL ROWS` and `undelete` |
-| `massiveUpdate()` | Lists, loops, filtering, bulkification and bulk DML |
-| `AccountMapExercise` | `List<Account>`, `Map<Id, Account>`, `.put()`, `.get()` and retrieving records by Id |
-| `AccountCollectionExercise` | `List<Account>`, `Set<Id>`, `Map<Id, Account>`, filtering by Industry and collection transformations |
+- `before insert`
+- `before update`
+- `after insert`
+- `Trigger.new`
+- `Trigger.oldMap`
+- Comparing old and new values
+- Updating fields before records are saved
+- Creating related records after insert
+- Basic trigger bulkification
 
 ---
 
-# Practice Components
+## Apex Practice Exercises
 
-| Component | Concepts Practiced |
+Some of the exercises included in this repository are:
+
+| Exercise | Practice |
 |---|---|
-| `helloWorld` | Basic LWC, data binding and conditional rendering |
-| `employeeInfo` | Inputs, events and conditional rendering |
-| `helloForEach` | Lists, `for:each` and `key` |
-| Iterator exercise | `iterator`, `first` and `last` |
-| `simpleInterestCalculator` | Inputs, event handlers and calculations |
+| `EmployeeCalculator` | Methods, parameters and conditionals |
+| `SalaryAnalyzer` | Lists, loops and counters |
+| `EmailAnalyzer` | Sets and duplicate removal |
+| `EmployeeSalaryMap` | Maps and retrieving values |
+| `AccountAnalyzer` | SOQL, DML, aggregate queries and record operations |
+| `AccountMapExercise` | Converting a List into a Map |
+| `AccountCollectionExercise` | Working with List, Set and Map |
+| `AccountIndustryFilterExercise` | Filtering Accounts by multiple industries |
+| `AccountAdvancedFilterExercise` | Multiple conditions and collections |
+| `AccountNullHandlingExercise` | Null validation |
+| `AccountIndustryTrigger` | `before insert` and `Trigger.new` |
+| `AccountIndustryUpdateTrigger` | `before update` and `Trigger.oldMap` |
+| `AccountContactAfterInsertTrigger` | `after insert` and creating related Contacts |
+
+---
+
+## LWC Practice Components
+
+| Component | Practice |
+|---|---|
+| `helloWorld` | Basic LWC and data binding |
+| `employeeInfo` | Inputs and events |
+| `helloForEach` | Lists and `for:each` |
+| Iterator exercise | Iterators |
+| `simpleInterestCalculator` | Inputs and calculations |
 | `simpleShapeCalculator` | Event handling and calculations |
 | Public Property Parent/Child | `@api` and Parent → Child communication |
-| `productList` / `productDetail` | Arrays, objects, `for:each` and Parent → Child communication |
-| `textParent` / `textChild` | Public methods, `@api` and `querySelector()` |
-| Lifecycle Hooks exercise | LWC component lifecycle |
-| `eventParent` / `eventChild` | Child → Parent communication using `CustomEvent`, `detail` and `dispatchEvent()` |
-| `bubbleParent` / `bubbleChild` | Child → Parent communication using `CustomEvent`, `detail`, `bubbles: true` and event handling |
+| `productList` / `productDetail` | Arrays, objects and component communication |
+| `textParent` / `textChild` | Public methods and `querySelector()` |
+| Lifecycle Hooks exercise | Component lifecycle |
+| `eventParent` / `eventChild` | Custom Events |
+| `bubbleParent` / `bubbleChild` | Event bubbling |
 
 ---
 
-# Current Learning Focus
+## Current Learning Focus
 
-I am currently focusing on strengthening my Apex programming skills by solving exercises progressively with less assistance.
+I am currently focused on improving my Apex programming skills and understanding how Salesforce development concepts work together.
 
-The goal is to improve:
+My next areas of practice include:
 
-- Apex syntax
-- Programming logic
-- SOQL and DML
-- Collections
-- Bulkification
+- Apex Triggers
+- Test Classes
 - Governor Limits
-- Triggers
-- Test Classes
+- Exception handling
+- Batch Apex
+- Dynamic Apex
 - Apex + LWC integration
-- Salesforce technical interview preparation
+- Salesforce technical interview practice
 
 ---
 
-# Goal
+## Goal
 
-My goal is to strengthen my Salesforce development skills through hands-on practice and build a solid foundation in:
+My goal is to continue building a strong foundation in Salesforce development through hands-on practice.
 
-- Lightning Web Components
-- Apex
-- SOQL
-- DML
-- Collections
-- Bulkification
-- Triggers
-- Test Classes
-- Salesforce development best practices
-
-This repository also documents my preparation for the **Salesforce Platform Developer I certification** and future **Salesforce Developer technical interviews**.
+This repository documents my learning process while preparing for the **Salesforce Platform Developer I certification** and growing toward a professional Salesforce Developer role.
 
 ---
 
-# Progress
+## Progress
 
-This repository will continue to evolve as I learn and practice new Salesforce development concepts.
-
-New exercises will progressively combine multiple topics to simulate more realistic Salesforce development scenarios.
+This repository will continue to evolve as I learn new concepts and complete more Salesforce development exercises.
