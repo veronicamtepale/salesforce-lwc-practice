@@ -120,6 +120,9 @@ I am currently preparing for the **Salesforce Platform Developer I** certificati
 - Updating fields before records are saved
 - Creating related records after insert
 - Basic trigger bulkification
+- `after update`
+- Comparing old and new field values
+- Creating related records after an update
 
 ---
 
@@ -142,6 +145,7 @@ Some of the exercises included in this repository are:
 | `AccountIndustryTrigger` | `before insert` and `Trigger.new` |
 | `AccountIndustryUpdateTrigger` | `before update` and `Trigger.oldMap` |
 | `AccountContactAfterInsertTrigger` | `after insert` and creating related Contacts |
+| `AccountHotRatingAfterUpdateTrigger` | `after update`, `Trigger.oldMap`, detecting field changes and creating related Tasks |
 
 ---
 
