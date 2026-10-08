@@ -124,6 +124,10 @@ I am currently preparing for the **Salesforce Platform Developer I** certificati
 - Comparing old and new field values
 - Creating related records after an update
 - Practiced `after update` with field change detection using `Trigger.oldMap`
+- Validation with `addError()`
+- `before insert` and `before update` validation
+- Partial DML handling with `Database.insert(..., false)`
+- Working with `Database.SaveResult`
 
 ---
 
@@ -148,6 +152,7 @@ Some of the exercises included in this repository are:
 | `AccountContactAfterInsertTrigger` | `after insert` and creating related Contacts |
 | `AccountHotRatingAfterUpdateTrigger` | `after update`, `Trigger.oldMap`, detecting field changes and creating related Tasks |
 | `AccountPriorityAfterUpdateTrigger` | `after update`, comparing old vs new values and creating a related Task |
+| `AccountEmployeeValidationTrigger` | `addError()`, validation rules, `Database.insert()` and `Database.SaveResult` |
 
 ---
 
