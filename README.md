@@ -63,6 +63,8 @@ I am currently preparing for the **Salesforce Platform Developer I** certificati
 - Null handling
 - Exception handling with `try`, `catch`, and `finally`
 - Handling `DmlException`
+- DML exception analysis with `DmlException`
+- Working with `getNumDml()`, `getDmlMessage()` and `getDmlIndex()`
 
 ---
 
@@ -156,6 +158,7 @@ Some of the exercises included in this repository are:
 | `AccountPriorityAfterUpdateTrigger` | `after update`, comparing old vs new values and creating a related Task |
 | `AccountEmployeeValidationTrigger` | `addError()`, validation rules, `Database.insert()` and `Database.SaveResult` |
 | `AccountInsertService` | `try-catch-finally`, `DmlException` and handling insert errors |
+| `AccountDmlExceptionAnalyzer` | `DmlException`, analyzing DML errors and identifying failed record indexes |
 
 ---
 
