@@ -65,6 +65,10 @@ I am currently preparing for the **Salesforce Platform Developer I** certificati
 - Handling `DmlException`
 - DML exception analysis with `DmlException`
 - Working with `getNumDml()`, `getDmlMessage()` and `getDmlIndex()`
+- Apex Test Classes with `@isTest`
+- `Test.startTest()` and `Test.stopTest()`
+- Assertions with `System.assert()`
+- Testing expected DML exceptions
 
 ---
 
@@ -159,6 +163,7 @@ Some of the exercises included in this repository are:
 | `AccountEmployeeValidationTrigger` | `addError()`, validation rules, `Database.insert()` and `Database.SaveResult` |
 | `AccountInsertService` | `try-catch-finally`, `DmlException` and handling insert errors |
 | `AccountDmlExceptionAnalyzer` | `DmlException`, analyzing DML errors and identifying failed record indexes |
+| `AccountEmployeeValidationTriggerTest` | `@isTest`, `Test.startTest()`, `Test.stopTest()`, assertions and expected `DmlException` |
 
 ---
 
