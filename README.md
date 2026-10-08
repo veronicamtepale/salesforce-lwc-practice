@@ -61,6 +61,8 @@ I am currently preparing for the **Salesforce Platform Developer I** certificati
 - `static`
 - `void`
 - Null handling
+- Exception handling with `try`, `catch`, and `finally`
+- Handling `DmlException`
 
 ---
 
@@ -153,6 +155,7 @@ Some of the exercises included in this repository are:
 | `AccountHotRatingAfterUpdateTrigger` | `after update`, `Trigger.oldMap`, detecting field changes and creating related Tasks |
 | `AccountPriorityAfterUpdateTrigger` | `after update`, comparing old vs new values and creating a related Task |
 | `AccountEmployeeValidationTrigger` | `addError()`, validation rules, `Database.insert()` and `Database.SaveResult` |
+| `AccountInsertService` | `try-catch-finally`, `DmlException` and handling insert errors |
 
 ---
 
