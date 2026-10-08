@@ -123,6 +123,7 @@ I am currently preparing for the **Salesforce Platform Developer I** certificati
 - `after update`
 - Comparing old and new field values
 - Creating related records after an update
+- Practiced `after update` with field change detection using `Trigger.oldMap`
 
 ---
 
@@ -146,6 +147,7 @@ Some of the exercises included in this repository are:
 | `AccountIndustryUpdateTrigger` | `before update` and `Trigger.oldMap` |
 | `AccountContactAfterInsertTrigger` | `after insert` and creating related Contacts |
 | `AccountHotRatingAfterUpdateTrigger` | `after update`, `Trigger.oldMap`, detecting field changes and creating related Tasks |
+| `AccountPriorityAfterUpdateTrigger` | `after update`, comparing old vs new values and creating a related Task |
 
 ---
 
